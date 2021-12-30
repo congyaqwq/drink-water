@@ -2,7 +2,7 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
-const configuredTime:number = vscode.workspace.getConfiguration().get('conf.drinkWater.time') || 3000000;
+const configuredTime:number = vscode.workspace.getConfiguration().get('conf.drinkWater.time') || 30;
 if(typeof configuredTime !== 'number'||configuredTime < 1) {
 		vscode.window.showErrorMessage('时间必须为数字，不能小于1');
 		throw new Error('时间必须为数字，不能小于1');
